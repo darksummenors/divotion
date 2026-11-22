@@ -1,0 +1,83 @@
+/*
+ * Design tokens: the single source for colour, spacing, type, shape, depth, layers and motion.
+ * Colours are taken from the Gydo's Verdant logo. Components only use these variables,
+ * so a theme change (e.g. dark mode) only touches this file.
+ */
+:root {
+  /* Colour: brand */
+  --color-brand-900: #1f4a33;
+  --color-brand-700: #2f6b4a;
+  --color-brand-500: #5fa777;
+  --color-brand-300: #a9d8a2;
+  --color-brand-100: #eef6ec;
+
+  /* Colour: neutrals (warm, from the pot in the logo) */
+  --color-sand-300: #d9cdbb;
+  --color-sand-100: #f3ede3;
+
+  /* Colour: semantic */
+  --color-background: #fbfaf6;
+  --color-surface: #ffffff;
+  --color-text: #1d2a22;
+  --color-text-muted: #5b6b61;
+  --color-border: #e3ddd2;
+  --color-accent: var(--color-brand-700);
+  --color-accent-hover: var(--color-brand-900);
+  --color-on-accent: #ffffff;
+  --color-danger: #b3412e;
+  --color-focus: #2f6b4a;
+
+  /* Spacing: 4px scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Typography */
+  --font-sans: 'Montserrat Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2.25rem;
+  --text-3xl: 3rem;
+  --leading-tight: 1.2;
+  --leading-normal: 1.6;
+
+  /* Shape and depth */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-full: 999px;
+  --shadow-card: 0 1px 2px rgb(29 42 34 / 6%), 0 4px 16px rgb(29 42 34 / 6%);
+  --shadow-card-hover: 0 2px 4px rgb(29 42 34 / 8%), 0 12px 32px rgb(29 42 34 / 10%);
+  --shadow-panel: -8px 0 32px rgb(29 42 34 / 16%);
+
+  /* Layout */
+  --container-max: 75rem;
+  --header-height: 4.5rem;
+
+  /* Layers */
+  --z-header: 10;
+  --z-backdrop: 20;
+  --z-panel: 30;
+  --z-toast: 40;
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-normal: 0ms;
+  }
+}

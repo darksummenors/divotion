@@ -1,0 +1,114 @@
+[
+  {
+    "id": "monstera-deliciosa",
+    "name": "Monstera Deliciosa",
+    "description": "De iconische gatenplant met grote, ingesneden bladeren. Groeit snel, houdt van licht zonder directe zon en geeft elke kamer meteen een junglegevoel.",
+    "category": "Planten",
+    "price": {
+      "amount": 3495,
+      "currency": "EUR"
+    },
+    "image": {
+      "src": "/images/products/monstera-deliciosa.svg",
+      "alt": "Monstera met grote groene ingesneden bladeren in een crèmekleurige pot"
+    }
+  },
+  {
+    "id": "pilea-peperomioides",
+    "name": "Pilea Peperomioides",
+    "description": "De pannenkoekenplant: ronde, glanzende blaadjes op dunne steeltjes. Maakt makkelijk stekjes, dus ideaal om te delen met vrienden.",
+    "category": "Planten",
+    "price": {
+      "amount": 1495,
+      "currency": "EUR"
+    },
+    "image": {
+      "src": "/images/products/pilea-peperomioides.svg",
+      "alt": "Pilea met ronde groene blaadjes op dunne stelen in een kleine pot"
+    }
+  },
+  {
+    "id": "sansevieria-trifasciata",
+    "name": "Sansevieria Trifasciata",
+    "description": "Vrouwentong met stevige, rechtopstaande bladeren. Bijna onverwoestbaar en tevreden met weinig licht en af en toe water.",
+    "category": "Planten",
+    "price": {
+      "amount": 2495,
+      "currency": "EUR"
+    },
+    "image": {
+      "src": "/images/products/sansevieria-trifasciata.svg",
+      "alt": "Sansevieria met hoge, rechtopstaande gestreepte bladeren"
+    }
+  },
+  {
+    "id": "calathea-orbifolia",
+    "name": "Calathea Orbifolia",
+    "description": "Grote, ronde bladeren met zilvergroene strepen. Houdt van een vochtige omgeving, perfect voor de badkamer.",
+    "category": "Planten",
+    "price": {
+      "amount": 2995,
+      "currency": "EUR"
+    },
+    "image": {
+      "src": "/images/products/calathea-orbifolia.svg",
+      "alt": "Calathea met grote ronde gestreepte bladeren"
+    }
+  },
+  {
+    "id": "ficus-lyrata",
+    "name": "Ficus Lyrata",
+    "description": "De vioolbladplant groeit uit tot een kleine boom met grote, vioolvormige bladeren. Een echte blikvanger voor een lichte hoek.",
+    "category": "Planten",
+    "price": {
+      "amount": 4995,
+      "currency": "EUR"
+    },
+    "image": {
+      "src": "/images/products/ficus-lyrata.svg",
+      "alt": "Ficus lyrata met grote vioolvormige bladeren aan een rechte stam"
+    }
+  },
+  {
+    "id": "zamioculcas-zamiifolia",
+    "name": "Zamioculcas Zamiifolia",
+    "description": "De ZZ-plant met glanzende, ovale blaadjes aan sierlijk gebogen stelen. Kan prima tegen een vergeten gietbeurt.",
+    "category": "Planten",
+    "price": {
+      "amount": 2750,
+      "currency": "EUR"
+    },
+    "image": {
+      "src": "/images/products/zamioculcas-zamiifolia.svg",
+      "alt": "ZZ-plant met glanzende ovale blaadjes aan gebogen stelen"
+    }
+  },
+  {
+    "id": "terracotta-pot-bloom",
+    "name": "Terracotta pot Bloom",
+    "description": "Klassieke terracotta pot van 18 cm met drainagegat. Ademt goed, waardoor wortels gezond blijven.",
+    "category": "Potten",
+    "price": {
+      "amount": 1995,
+      "currency": "EUR"
+    },
+    "image": {
+      "src": "/images/products/terracotta-pot-bloom.svg",
+      "alt": "Lege terracotta pot met een rand"
+    }
+  },
+  {
+    "id": "keramische-pot-nest",
+    "name": "Keramische pot Nest",
+    "description": "Handgemaakte keramische pot van 22 cm in zachte crèmekleur met een groen golfpatroon. Inclusief schotel.",
+    "category": "Potten",
+    "price": {
+      "amount": 3200,
+      "currency": "EUR"
+    },
+    "image": {
+      "src": "/images/products/keramische-pot-nest.svg",
+      "alt": "Crèmekleurige keramische pot met een groen golfpatroon"
+    }
+  }
+]

@@ -1,0 +1,45 @@
+.page {
+  padding-block: var(--space-6) var(--space-7);
+  composes: center from '../styles/layout.module.css';
+}
+
+@media (min-width: 48rem) {
+  .page {
+    padding-block: var(--space-7) var(--space-8);
+  }
+}
+
+.intro {
+  max-width: 40rem;
+  margin-bottom: var(--space-6);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-2);
+  color: var(--color-brand-500);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+@media (min-width: 48rem) {
+  .title {
+    font-size: var(--text-3xl);
+  }
+}
+
+.lead {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+.backLink {
+  margin-bottom: var(--space-5);
+  margin-left: calc(var(--space-3) * -1);
+}
