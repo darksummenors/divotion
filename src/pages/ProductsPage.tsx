@@ -1,11 +1,11 @@
-import { Button } from '../components/ui/Button/Button'
-import { EmptyState } from '../components/ui/EmptyState/EmptyState'
-import { ProductGrid, ProductGridSkeleton } from '../features/products/ProductGrid/ProductGrid'
-import { useProducts } from '../features/products/useProducts'
-import styles from './Page.module.css'
+import { Button } from '../components/ui/Button/Button';
+import { EmptyState } from '../components/ui/EmptyState/EmptyState';
+import { ProductGrid, ProductGridSkeleton } from '../features/products/ProductGrid/ProductGrid';
+import { useProducts } from '../features/products/useProducts';
+import styles from './Page.module.css';
 
 export default function ProductsPage() {
-  const products = useProducts()
+  const products = useProducts();
 
   return (
     <div className={styles.page}>
@@ -20,14 +20,7 @@ export default function ProductsPage() {
       </header>
 
       <section aria-label="Products">
-        {products.status === 'loading' && (
-          <>
-            <p role="status" className="visually-hidden">
-              Producten laden…
-            </p>
-            <ProductGridSkeleton />
-          </>
-        )}
+        {products.status === 'loading' && <ProductGridSkeleton />}
 
         {products.status === 'error' && (
           <EmptyState
@@ -40,5 +33,5 @@ export default function ProductsPage() {
         {products.status === 'success' && <ProductGrid products={products.products} />}
       </section>
     </div>
-  )
+  );
 }

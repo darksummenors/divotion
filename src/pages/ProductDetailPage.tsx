@@ -4,6 +4,7 @@ import { EmptyState } from '../components/ui/EmptyState/EmptyState'
 import { Skeleton } from '../components/ui/Skeleton/Skeleton'
 import { ProductDetail } from '../features/products/ProductDetail/ProductDetail'
 import { useProduct } from '../features/products/useProducts'
+import { WishlistToggle } from '../features/wishlist/WishlistToggle/WishlistToggle'
 import styles from './Page.module.css'
 
 export default function ProductDetailPage() {
@@ -16,14 +17,7 @@ export default function ProductDetailPage() {
         Alle producten
       </ButtonLink>
 
-      {result.status === 'loading' && (
-        <>
-          <p role="status" className="visually-hidden">
-            Product laden…
-          </p>
-          <Skeleton height="24rem" radius="var(--radius-lg)" />
-        </>
-      )}
+      {result.status === 'loading' && <Skeleton height="24rem" radius="var(--radius-lg)" />}
 
       {result.status === 'error' && (
         <EmptyState
@@ -57,7 +51,10 @@ export default function ProductDetailPage() {
       {result.status === 'success' && (
         <>
           <title>{`${result.product.name} - Gydo's Verdant`}</title>
-          <ProductDetail product={result.product} />
+          <ProductDetail
+            product={result.product}
+            action={<WishlistToggle product={result.product} appearance="button" />}
+          />
         </>
       )}
     </div>

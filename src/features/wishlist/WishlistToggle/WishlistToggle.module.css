@@ -1,0 +1,7 @@
+.filled {
+  color: #c4553a;
+}
+
+.filled:hover:not(:disabled) {
+  color: #a8442c;
+}

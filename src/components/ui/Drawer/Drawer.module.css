@@ -1,0 +1,88 @@
+.drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(26rem, 100%);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: var(--shadow-panel);
+  transform: translateX(100%);
+  transition:
+    transform var(--duration-normal) var(--ease-out),
+    overlay var(--duration-normal) allow-discrete,
+    display var(--duration-normal) allow-discrete;
+}
+
+.drawer[open] {
+  transform: translateX(0);
+}
+
+@starting-style {
+  .drawer[open] {
+    transform: translateX(100%);
+  }
+}
+
+.drawer::backdrop {
+  background: rgb(29 42 34 / 0%);
+  transition:
+    background-color var(--duration-normal) var(--ease-out),
+    overlay var(--duration-normal) allow-discrete,
+    display var(--duration-normal) allow-discrete;
+}
+
+.drawer[open]::backdrop {
+  background: rgb(29 42 34 / 40%);
+}
+
+@starting-style {
+  .drawer[open]::backdrop {
+    background: rgb(29 42 34 / 0%);
+  }
+}
+
+/*
+ * While the dialog is open the page can't scroll, which hides the scrollbar.
+ * The padding takes the scrollbar's place, so the page doesn't shift sideways.
+ */
+:global(html:has(dialog[open])) {
+  overflow: hidden;
+  padding-right: var(--scrollbar-width, 0px);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: var(--text-xl);
+}
+
+.body {
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: var(--space-4) var(--space-5);
+}
+
+.footer {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-background);
+}
