@@ -16,7 +16,7 @@ export function Footer() {
           <p className={styles.brand}>Gydo's Verdant</p>
           <p className={styles.muted}>Een fictieve plantenwinkel voor Divotion.</p>
         </div>
-        <div className={styles.contact}>
+        <div>
           <h2 className={styles.heading}>Gemaakt door {CONTACT.name}</h2>
           <ul className={styles.links}>
             <li>
@@ -29,14 +29,12 @@ export function Footer() {
               <a href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer">
                 <Icon name="external" size={18} />
                 LinkedIn
-                <span className="visually-hidden"> (opens in new tab)</span>
               </a>
             </li>
             <li>
               <a href={CONTACT.github} target="_blank" rel="noopener noreferrer">
                 <Icon name="external" size={18} />
                 Broncode op GitHub
-                <span className="visually-hidden"> (opens in new tab)</span>
               </a>
             </li>
           </ul>

@@ -17,7 +17,7 @@ export default function RouteErrorPage() {
       <EmptyState
         headingLevel="h1"
         title="Something went wrong"
-        description={detail ? `Error: ${detail}` : 'Probeer de pagina opnieuw te laden.'}
+        description={`Error: ${detail}`}
         action={<Button onClick={() => window.location.reload()}>Reload page</Button>}
       />
     </div>
