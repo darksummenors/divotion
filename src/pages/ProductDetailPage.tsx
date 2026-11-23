@@ -1,15 +1,15 @@
-import { useParams } from 'react-router'
-import { Button, ButtonLink } from '../components/ui/Button/Button'
-import { EmptyState } from '../components/ui/EmptyState/EmptyState'
-import { Skeleton } from '../components/ui/Skeleton/Skeleton'
-import { ProductDetail } from '../features/products/ProductDetail/ProductDetail'
-import { useProduct } from '../features/products/useProducts'
-import { WishlistToggle } from '../features/wishlist/WishlistToggle/WishlistToggle'
-import styles from './Page.module.css'
+import { useParams } from 'react-router';
+import { Button, ButtonLink } from '../components/ui/Button/Button';
+import { EmptyState } from '../components/ui/EmptyState/EmptyState';
+import { Skeleton } from '../components/ui/Skeleton/Skeleton';
+import { ProductDetail } from '../features/products/ProductDetail/ProductDetail';
+import { useProduct } from '../features/products/useProducts';
+import { WishlistToggle } from '../features/wishlist/WishlistToggle/WishlistToggle';
+import styles from './Page.module.css';
 
 export default function ProductDetailPage() {
-  const { productId } = useParams()
-  const result = useProduct(productId)
+  const { productId } = useParams();
+  const result = useProduct(productId);
 
   return (
     <div className={styles.page}>
@@ -58,5 +58,5 @@ export default function ProductDetailPage() {
         </>
       )}
     </div>
-  )
+  );
 }

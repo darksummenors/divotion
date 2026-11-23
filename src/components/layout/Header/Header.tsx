@@ -1,7 +1,7 @@
-import { UserMenu } from '../../../features/auth/UserMenu/UserMenu'
-import { WishlistButton } from '../../../features/wishlist/WishlistButton/WishlistButton'
-import { Logo } from '../Logo/Logo'
-import styles from './Header.module.css'
+import { UserMenu } from '../../../features/auth/UserMenu/UserMenu';
+import { WishlistButton } from '../../../features/wishlist/WishlistButton/WishlistButton';
+import { Logo } from '../Logo/Logo';
+import styles from './Header.module.css';
 
 export function Header() {
   return (
@@ -14,5 +14,5 @@ export function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

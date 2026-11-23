@@ -1,13 +1,13 @@
-import type { ReactNode } from 'react'
-import styles from './EmptyState.module.css'
+import type { ReactNode } from 'react';
+import styles from './EmptyState.module.css';
 
 export type EmptyStateProps = {
-  title: string
-  description?: string
-  illustration?: ReactNode
-  action?: ReactNode
-  headingLevel?: 'h1' | 'h2' | 'h3'
-}
+  title: string;
+  description?: string;
+  illustration?: ReactNode;
+  action?: ReactNode;
+  headingLevel?: 'h1' | 'h2' | 'h3';
+};
 
 export function EmptyState({
   title,
@@ -23,5 +23,5 @@ export function EmptyState({
       {description && <p className={styles.description}>{description}</p>}
       {action && <div className={styles.action}>{action}</div>}
     </div>
-  )
+  );
 }

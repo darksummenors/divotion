@@ -1,4 +1,4 @@
-import { ButtonLink } from '../../../components/ui/Button/Button'
+import { ButtonLink } from '../../../components/ui/Button/Button';
 
 /** TODO (login step): show "Hoi, <naam>" and a log-out button when someone is logged in. */
 export function UserMenu() {
@@ -6,5 +6,5 @@ export function UserMenu() {
     <ButtonLink to="/login" variant="ghost" size="sm" icon="user">
       Inloggen
     </ButtonLink>
-  )
+  );
 }

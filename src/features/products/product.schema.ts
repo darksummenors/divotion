@@ -1,4 +1,4 @@
-import { z } from 'zod'
+import { z } from 'zod';
 
 /**
  * Validating types with zod
@@ -16,8 +16,8 @@ export const ProductSchema = z.object({
     src: z.string().min(1),
     alt: z.string(),
   }),
-})
+});
 
-export const ProductListSchema = z.array(ProductSchema)
+export const ProductListSchema = z.array(ProductSchema);
 
-export type Product = z.infer<typeof ProductSchema>
+export type Product = z.infer<typeof ProductSchema>;

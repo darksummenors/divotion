@@ -1,15 +1,15 @@
-import { isRouteErrorResponse, useRouteError } from 'react-router'
-import { Button } from '../components/ui/Button/Button'
-import { EmptyState } from '../components/ui/EmptyState/EmptyState'
-import styles from './Page.module.css'
+import { isRouteErrorResponse, useRouteError } from 'react-router';
+import { Button } from '../components/ui/Button/Button';
+import { EmptyState } from '../components/ui/EmptyState/EmptyState';
+import styles from './Page.module.css';
 
 export default function RouteErrorPage() {
-  const error = useRouteError()
+  const error = useRouteError();
   const detail = isRouteErrorResponse(error)
     ? `${error.status} ${error.statusText}`
     : error instanceof Error
       ? error.message
-      : 'Unknown error'
+      : 'Unknown error';
 
   return (
     <div className={styles.page}>
@@ -21,5 +21,5 @@ export default function RouteErrorPage() {
         action={<Button onClick={() => window.location.reload()}>Reload page</Button>}
       />
     </div>
-  )
+  );
 }

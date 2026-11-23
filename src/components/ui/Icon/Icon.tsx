@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import type { ReactNode } from 'react';
 
 /** icon set (24×24, stroke-based). */
 const paths = {
@@ -25,16 +25,16 @@ const paths = {
       <path d="m3.5 7 8.5 6 8.5-6" />
     </>
   ),
-} satisfies Record<string, ReactNode>
+} satisfies Record<string, ReactNode>;
 
-export type IconName = keyof typeof paths
+export type IconName = keyof typeof paths;
 
 export type IconProps = {
-  name: IconName
-  size?: number
-  filled?: boolean
-  className?: string
-}
+  name: IconName;
+  size?: number;
+  filled?: boolean;
+  className?: string;
+};
 
 export function Icon({ name, size = 24, filled = false, className }: IconProps) {
   return (
@@ -53,5 +53,5 @@ export function Icon({ name, size = 24, filled = false, className }: IconProps) 
     >
       {paths[name]}
     </svg>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import { ButtonLink } from '../components/ui/Button/Button'
-import { EmptyState } from '../components/ui/EmptyState/EmptyState'
-import styles from './Page.module.css'
+import { ButtonLink } from '../components/ui/Button/Button';
+import { EmptyState } from '../components/ui/EmptyState/EmptyState';
+import styles from './Page.module.css';
 
 export default function NotFoundPage() {
   return (
@@ -16,5 +16,5 @@ export default function NotFoundPage() {
         headingLevel="h1"
       />
     </div>
-  )
+  );
 }

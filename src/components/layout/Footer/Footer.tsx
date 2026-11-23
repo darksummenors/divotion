@@ -1,12 +1,12 @@
-import { Icon } from '../../ui/Icon/Icon'
-import styles from './Footer.module.css'
+import { Icon } from '../../ui/Icon/Icon';
+import styles from './Footer.module.css';
 
 const CONTACT = {
   name: 'Gydo Titulaer',
   email: 'gydo.titulaer@gmail.com',
   linkedin: 'https://www.linkedin.com/in/gydotitulaer/',
   github: 'https://github.com/darksummenors/divotion',
-}
+};
 
 export function Footer() {
   return (
@@ -46,5 +46,5 @@ export function Footer() {
         </p>
       </div>
     </footer>
-  )
+  );
 }
