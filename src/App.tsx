@@ -1,10 +1,17 @@
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
+import { Provider } from 'react-redux'
 import { routes } from './app/routes'
+import { createAppStore } from './app/store'
 
 const router = createBrowserRouter(routes)
+const store = createAppStore()
 
-/** TODO: The Redux store Provider is added here in the wishlist step. */
+/** App-wide providers: the Redux store wraps the router. */
 export default function App() {
-  return <RouterProvider router={router} />
+  return (
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
+  )
 }
