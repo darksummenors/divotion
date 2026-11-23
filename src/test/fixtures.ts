@@ -1,5 +1,5 @@
-import { vi } from 'vitest'
-import type { Product } from '../features/products/product.schema'
+import { vi } from 'vitest';
+import type { Product } from '../features/products/product.schema';
 
 export const monstera: Product = {
   id: 'monstera-deliciosa',
@@ -8,7 +8,7 @@ export const monstera: Product = {
   category: 'Planten',
   price: { amount: 3495, currency: 'EUR' },
   image: { src: '/images/products/monstera-deliciosa.svg', alt: 'Monstera' },
-}
+};
 
 export const pilea: Product = {
   id: 'pilea-peperomioides',
@@ -17,13 +17,15 @@ export const pilea: Product = {
   category: 'Planten',
   price: { amount: 1495, currency: 'EUR' },
   image: { src: '/images/products/pilea-peperomioides.svg', alt: 'Pilea' },
-}
+};
 
 export function mockFetchProducts(products: unknown, status = 200) {
-  return vi.spyOn(globalThis, 'fetch').mockResolvedValue(
-    new Response(JSON.stringify(products), {
-      status,
-      headers: { 'Content-Type': 'application/json' },
-    }),
-  )
+  return vi.spyOn(globalThis, 'fetch').mockImplementation(() =>
+    Promise.resolve(
+      new Response(JSON.stringify(products), {
+        status,
+        headers: { 'Content-Type': 'application/json' },
+      }),
+    ),
+  );
 }
