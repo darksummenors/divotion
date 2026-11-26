@@ -52,7 +52,7 @@ export function WishlistDrawer() {
 
   return (
     <Drawer isOpen={isOpen} onClose={close} title="Verlanglijst" footer={footer}>
-      {items.length === 0 ? (
+      {items.length === 0 && (
         <EmptyState
           title="Je verlanglijst is nog leeg"
           description="Klik op het hartje bij een plant om hem hier te bewaren."
@@ -66,20 +66,26 @@ export function WishlistDrawer() {
           }
           headingLevel="h3"
         />
-      ) : products.status === 'loading' ? (
+      )}
+
+      {products.status === 'loading' && (
         <div className={styles.loading}>
           {items.map((item) => (
             <Skeleton key={item.productId} height="5rem" radius="var(--radius-md)" />
           ))}
         </div>
-      ) : products.status === 'error' ? (
+      )}
+
+      {products.status === 'error' && (
         <EmptyState
           title="Je verlanglijst kon niet worden geladen"
           description="Controleer je verbinding en probeer het opnieuw."
           action={<Button onClick={products.retry}>Opnieuw proberen</Button>}
           headingLevel="h3"
         />
-      ) : (
+      )}
+
+      {products.status === 'success' && (
         <ul className={styles.list}>
           {summary?.lines.map((line) => (
             <li key={line.product.id}>
