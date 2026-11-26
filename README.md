@@ -1,6 +1,7 @@
 # Gydo's Verdant wishlist
 
 A product listing page for a fictional plant shop, with a wishlist in a side panel. Built with React, TypeScript and Vite.
+<img width="1917" height="941" alt="image" src="https://github.com/user-attachments/assets/604c0fc6-40f0-47e5-aac6-11afa68a6dc1" />
 
 ## Getting started
 
